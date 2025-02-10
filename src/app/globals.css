@@ -2,27 +2,67 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #171717;
-  --foreground: #ffffff;
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #ededed;
-    --foreground: #0a0a0a;
+    --background: hsl(335, 100%, 99%);
+    --foreground: hsl(335, 50%, 15%);
+
+    --card: hsl(335, 100%, 99%);
+    --card-foreground: hsl(335, 50%, 15%);
+
+    --popover: hsl(335, 100%, 99%);
+    --popover-foreground: hsl(335, 50%, 15%);
+
+    --primary: hsl(335, 95%, 65%);
+    --primary-foreground: hsl(335, 100%, 99%);
+
+    --secondary: hsl(335, 30%, 94%);
+    --secondary-foreground: hsl(335, 50%, 15%);
+
+    --muted: hsl(335, 30%, 94%);
+    --muted-foreground: hsl(335, 40%, 35%);
+
+    --accent: hsl(335, 30%, 94%);
+    --accent-foreground: hsl(335, 50%, 15%);
+
+    --destructive: hsl(0, 84.2%, 60.2%);
+    --destructive-foreground: hsl(0, 0%, 98%);
+
+    --border: hsl(335, 30%, 90%);
+    --input: hsl(335, 30%, 90%);
+    --ring: hsl(335, 95%, 65%);
+
+    --radius: 0.75rem;
   }
-}
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-}
+  .dark {
+    --background: hsl(335, 50%, 8%);
+    --foreground: hsl(335, 30%, 94%);
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+    --card: hsl(335, 50%, 8%);
+    --card-foreground: hsl(335, 30%, 94%);
+
+    --popover: hsl(335, 50%, 8%);
+    --popover-foreground: hsl(335, 30%, 94%);
+
+    --primary: hsl(335, 95%, 65%);
+    --primary-foreground: hsl(335, 50%, 8%);
+
+    --secondary: hsl(335, 50%, 15%);
+    --secondary-foreground: hsl(335, 30%, 94%);
+
+    --muted: hsl(335, 50%, 15%);
+    --muted-foreground: hsl(335, 40%, 75%);
+
+    --accent: hsl(335, 50%, 15%);
+    --accent-foreground: hsl(335, 30%, 94%);
+
+    --destructive: hsl(0, 62.8%, 30.6%);
+    --destructive-foreground: hsl(335, 30%, 94%);
+
+    --border: hsl(335, 50%, 15%);
+    --input: hsl(335, 50%, 15%);
+    --ring: hsl(335, 95%, 65%);
   }
 }
 
@@ -31,6 +71,25 @@ body {
   @apply flex items-center justify-between gap-20 overflow-x-auto px-2 py-3 leading-none lg:px-0 lg:py-0;
 }
 
-.navLink{
+.navLink {
   @apply flex items-center gap-1.5 px-2 py-0.5 leading-none transition-all text-sm md:text-base;
 }
+
+/* Card project home */
+.card-containers {
+  @apply p-6 border rounded-2xl bg-[rgba(var(--card),0.5)] backdrop-blur-sm hover:shadow-lg hover:shadow-[rgba(var(--primary),0.05)] transition-all duration-300;
+}
+
+.icons-card {
+  @apply w-12 h-12 mb-4 group-hover:scale-110 transition-transform;
+}
+
+/* home */
+.home {
+  @apply min-h-screen bg-gradient-to-b from-background via-background to-[rgba(var(--secondary),0.2)];
+}
+
+.home-container{
+  @apply container px-4 py-20 mx-auto relative
+}
+

@@ -17,12 +17,10 @@ export default function RootLayout({ children }: Readonly<Props>) {
   return (
     <html lang="pt-br">
       <body>
-        <>
-        <Suspense>
+        <div className="relative flex min-h-screen flex-col">
           <NavHome/>
-        </Suspense>
-          {children}
-        </>
+          <main className="flex-1">{children}</main>
+        </div>
       </body>
     </html>
   );
