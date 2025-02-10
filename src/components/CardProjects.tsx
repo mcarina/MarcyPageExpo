@@ -12,7 +12,7 @@ function CardProjects() {
     transition={{ duration: 0.5, delay: 0.2 }}
     className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto"
   >
-    <Link href="/Projects/frontend" className="group card-containers">
+    <Link href="/Projects/frontend" className="group p-6 border rounded-2xl bg-card/50 backdrop-blur-sm hover:shadow-lg hover:shadow-primary/5 transition-all duration-300">
       <Code className="icons-card text-primary" />
       <h3 className="text-xl font-semibold mb-2">Front-end</h3>
       <p className="text-muted-foreground">
@@ -32,6 +32,7 @@ function CardProjects() {
     </Link>
 
   </motion.div>
+
   )
 }
 
