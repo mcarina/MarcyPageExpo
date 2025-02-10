@@ -1,51 +1,70 @@
-import { Code, Terminal, Layout } from "lucide-react"
-import CardSobreMim from "./CardSobreMim"
+"use client"
 
-function SobreMim() {
+import { commands } from "@/app/Sobre-Mim/_component"
+import { useState } from "react"
+
+export default function SobreMim() {
+    const [commandHistory, setCommandHistory] = useState<Array<{ command: string; output: string }>>([
+        { command: "help", output: commands.help },
+    ])
+
+    const [currentCommand, setCurrentCommand] = useState("")
+
+    const executeCommand = (cmd: string) => {
+        const command = cmd.toLowerCase().trim()
+        if (command === "cls") {setCommandHistory([]) 
+        return}
+    
+        const output = commands[command as keyof typeof commands] || 'Comando não reconhecido. Digite "help" para ver comandos disponíveis.'
+    
+        setCommandHistory((prev) => [...prev, { command, output }])
+        setCurrentCommand("")
+    }
+
+
   return (
     <section className="about">
-        <div className="container mx-auto px-4 text-center mb-12">
-        <h1>
-            Sobre Mim
-        </h1>
-        <p className="p-subtext text-muted-foreground">Sou brasileira de Manaus-Amazonas.</p>
+        <div className="border p-4 mb-8">
+        <p className="text-muted-foreground mt-2 text-center">
+            +-------------+  marcyexpo_terminal v1.0.0  +-------------+
+        </p>
         </div>
 
-        <div  className="about-container2">
-            <div className="">
-                <image src="" className="w-full h-auto object-cover"/>
-            </div>
+        <div className="about-container2">
+            <div className="space-y-4">
 
-            <div className="space-y-6">
-                <h2>
-                    call me by my name
-                </h2>
-                <p className="text-muted-foreground">
-                    Sou uma desenvolvedora Full Stack apaixonada por criar experiências web incríveis. Com experiência
-                    <br/>
-                    em Next.js, React, Laravel e Python, adoro enfrentar desafios e transformar ideias complexas em soluções
-                    <br/>
-                    elegantes e eficientes.
-                </p>
-                <p className="text-muted-foreground">
-                    Quando não estou codando, você pode me encontrar explorando novas tecnologias, contribuindo para 
-                    <br/>
-                    projetos open-source ou mentorando desenvolvedores iniciantes.
-                </p>
-
-                <div className="flex flex-wrap gap-4">
-                    <Code/>
-                    <Terminal/>
-                    <Layout/>
-                </div>            
+                {commandHistory.map((entry, i) => (
+                    <div key={i} className="space-y-2">
+                        <div className="flex items-center gap-2">
+                            <span className="text-primary">&gt;</span>
+                            <span>{entry.command}</span>
+                        </div>
+                        <pre>{entry.output}</pre>
+                    </div>
+                    ))}
+                    
+                    <div className="flex items-center gap-2">
+                        <span className="text-primary">&gt;</span>
+                        <input
+                            type="text"
+                            value={currentCommand}
+                            onChange={(e) => setCurrentCommand(e.target.value)}
+                            onKeyDown={(e) => {
+                            if (e.key === "Enter" && currentCommand) {
+                                executeCommand(currentCommand)
+                            }
+                            }}
+                            className="bg-transparent border-none outline-none flex-1 focus:ring-0"
+                            placeholder="Digite um dos comandos acima para saber mais sobre mim..."
+                            spellCheck="false"
+                        />
+                    </div>
             </div>
         </div>
-        
-        <CardSobreMim/>
 
+        <footer className="footer">
+            <pre> {`/* visite meus projetos no github */`} </pre>
+        </footer>
     </section>
-  
 )
 }
-
-export default SobreMim

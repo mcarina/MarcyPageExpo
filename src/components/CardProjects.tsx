@@ -1,7 +1,6 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Code, Terminal, Layout } from "lucide-react"
 import Link from 'next/link'
 
 function CardProjects() {
@@ -12,23 +11,35 @@ function CardProjects() {
     transition={{ duration: 0.5, delay: 0.2 }}
     className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto"
   >
-    <Link href="/Projects/frontend" className="group p-6 border rounded-2xl bg-card/50 backdrop-blur-sm hover:shadow-lg hover:shadow-primary/5 transition-all duration-300">
-      <Code className="icons-card text-primary" />
-      <h3 className="text-xl font-semibold mb-2">Front-end</h3>
-      <p className="text-muted-foreground">
-        Criando interfaces com Next.js, React e TailwindCSS
-      </p>
-    </Link>
+    <Link href="/Projects/frontend" className="group card-containers">
+      <h3 className="text-xl font-semibold mb-2">
+      <span className="text-primary">&gt; </span>
+        Front-end
+      </h3>
+      <pre className="text-muted-foreground text-sm">
+        {`[ Next.js, React.js]`}
+      </pre>
+  </Link>
 
     <Link href="/Projects/backend" className="group card-containers">
-      <Terminal className="icons-card text-primary" />
-      <h3 className="text-xl font-semibold mb-2">Back-end</h3>
-      <p className="text-muted-foreground">Desenvolvendo APIs robustas e elegantes com Laravel e Python</p>
+      <h3 className="text-xl font-semibold mb-2">
+      <span className="text-primary">&gt; </span>
+        Back-end
+      </h3>
+      <pre className="text-muted-foreground text-sm">
+        {`[ Laravel, Python ]`}
+      </pre>
+
     </Link>
     <Link href="/Dashboards" className="group card-containers">
-      <Layout className="icons-card text-primary" />
-      <h3 className="text-xl font-semibold mb-2">Dashboards</h3>
-      <p className="text-muted-foreground">Visualização de dados que contam histórias e geram insights</p>
+      <h3 className="text-xl font-semibold mb-2">
+      <span className="text-primary">&gt; </span>
+        Dashboards
+      </h3>
+      <pre className="text-muted-foreground text-sm">
+        {`[ alguma descri;'ao aquo ]`}
+      </pre>
+
     </Link>
 
   </motion.div>
