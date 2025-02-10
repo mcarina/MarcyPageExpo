@@ -2,68 +2,85 @@
 @tailwind components;
 @tailwind utilities;
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @layer base {
   :root {
-    --background: hsl(335, 100%, 99%);
-    --foreground: hsl(335, 50%, 15%);
+    --background: 335 100% 99%;
+    --foreground: 335 50% 15%;
 
-    --card: hsl(335, 100%, 99%);
-    --card-foreground: hsl(335, 50%, 15%);
+    --card: 335 100% 99%;
+    --card-foreground: 335 50% 15%;
 
-    --popover: hsl(335, 100%, 99%);
-    --popover-foreground: hsl(335, 50%, 15%);
+    --popover: 335 100% 99%;
+    --popover-foreground: 335 50% 15%;
 
-    --primary: hsl(335, 95%, 65%);
-    --primary-foreground: hsl(335, 100%, 99%);
+    --primary: 335 95% 65%;
+    --primary-foreground: 335 100% 99%;
 
-    --secondary: hsl(335, 30%, 94%);
-    --secondary-foreground: hsl(335, 50%, 15%);
+    --secondary: 335 30% 94%;
+    --secondary-foreground: 335 50% 15%;
 
-    --muted: hsl(335, 30%, 94%);
-    --muted-foreground: hsl(335, 40%, 35%);
+    --muted: 335 30% 94%;
+    --muted-foreground: 335 40% 35%;
 
-    --accent: hsl(335, 30%, 94%);
-    --accent-foreground: hsl(335, 50%, 15%);
+    --accent: 335 30% 94%;
+    --accent-foreground: 335 50% 15%;
 
-    --destructive: hsl(0, 84.2%, 60.2%);
-    --destructive-foreground: hsl(0, 0%, 98%);
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: hsl(335, 30%, 90%);
-    --input: hsl(335, 30%, 90%);
-    --ring: hsl(335, 95%, 65%);
+    --border: 335 30% 90%;
+    --input: 335 30% 90%;
+    --ring: 335 95% 65%;
 
     --radius: 0.75rem;
   }
 
   .dark {
-    --background: hsl(335, 50%, 8%);
-    --foreground: hsl(335, 30%, 94%);
+    --background: 335 50% 8%;
+    --foreground: 335 30% 94%;
 
-    --card: hsl(335, 50%, 8%);
-    --card-foreground: hsl(335, 30%, 94%);
+    --card: 335 50% 8%;
+    --card-foreground: 335 30% 94%;
 
-    --popover: hsl(335, 50%, 8%);
-    --popover-foreground: hsl(335, 30%, 94%);
+    --popover: 335 50% 8%;
+    --popover-foreground: 335 30% 94%;
 
-    --primary: hsl(335, 95%, 65%);
-    --primary-foreground: hsl(335, 50%, 8%);
+    --primary: 335 95% 65%;
+    --primary-foreground: 335 50% 8%;
 
-    --secondary: hsl(335, 50%, 15%);
-    --secondary-foreground: hsl(335, 30%, 94%);
+    --secondary: 335 50% 15%;
+    --secondary-foreground: 335 30% 94%;
 
-    --muted: hsl(335, 50%, 15%);
-    --muted-foreground: hsl(335, 40%, 75%);
+    --muted: 335 50% 15%;
+    --muted-foreground: 335 40% 75%;
 
-    --accent: hsl(335, 50%, 15%);
-    --accent-foreground: hsl(335, 30%, 94%);
+    --accent: 335 50% 15%;
+    --accent-foreground: 335 30% 94%;
 
-    --destructive: hsl(0, 62.8%, 30.6%);
-    --destructive-foreground: hsl(335, 30%, 94%);
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 335 30% 94%;
 
-    --border: hsl(335, 50%, 15%);
-    --input: hsl(335, 50%, 15%);
-    --ring: hsl(335, 95%, 65%);
+    --border: 335 50% 15%;
+    --input: 335 50% 15%;
+    --ring: 335 95% 65%;
   }
+}
+
+
+h1{
+  @apply text-4xl font-bold mb-4 bg-gradient-to-r from-[rgba(var(--primary),0.8)] to-primary bg-clip-text
+}
+
+h2{
+  @apply text-2xl font-semibold mb-4 md:text-3xl font-medium text-[rgba(var(--foreground),0.08)]
+}
+
+.p-subtext{
+  @apply text-lg max-w-2xl mx-auto;
 }
 
 /* navHome */
@@ -90,6 +107,21 @@
 }
 
 .home-container{
-  @apply container px-4 py-20 mx-auto relative
+  @apply absolute inset-0 overflow-hidden pointer-events-none;
 }
 
+/* About, sobre mim */
+.about{
+  @apply min-h-screen bg-background font-mono p-4;
+}
+
+.about-container2{
+  @apply border p-4 min-h-[400px] bg-[rgba(var(--secondary),0.2)];
+}
+ pre{
+  @apply text-sm whitespace-pre-wrap;
+ }
+
+ footer{
+  @apply mt-8 text-center text-sm text-[#BDBDBDE6];
+ }

@@ -1,9 +1,11 @@
-import React from 'react'
+import SobreMim from "@/components/SobreMim"
 
 const page = () => {
   return (
-    <div>page</div>
+    <>
+    <SobreMim/>
+    </>
   )
 }
 
-export default page
+export default page  

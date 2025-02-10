@@ -17,6 +17,7 @@ const config: Config = {
         secondaryforeground:"var(--secondary-foreground)",
         card: "var(--card)",
         cardforeground: "var(--card-foreground)",
+        mutedforeground: "var(--muted-foreground)",
       },
     },
   },
