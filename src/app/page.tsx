@@ -1,7 +1,6 @@
 
 import CardProjects from "@/components/CardProjects";
-import { Sparkles, Github } from "lucide-react"
-import Link from 'next/link'
+import { Sparkles } from "lucide-react"
 
 export default function Home() {
   return (
@@ -19,9 +18,7 @@ export default function Home() {
           </code>
             
             <CardProjects/>
-            <Link href="https://github.com/mcarina" className=" flex justify-center" target="_blank" rel="noopener noreferrer">
-              <Github className="mt-10 w-8 h-8"/>
-            </Link>
+            
         </pre>
 
       </div>

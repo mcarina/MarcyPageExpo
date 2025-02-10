@@ -4,9 +4,9 @@ export const commands = {
     - help     : mostra esta ajuda
     - bio      : exibe informações pessoais
     - skills   : lista habilidades técnicas
-    - ed      : mostra formação acadêmica
+    - ed       : mostra formação acadêmica
     - contato  : informações de contato
-    - cls    : limpa o terminal`,
+    - cls      : limpa o terminal`,
 
     bio: `> Informações Pessoais:
     Nome: Marcia Carina Apolinario

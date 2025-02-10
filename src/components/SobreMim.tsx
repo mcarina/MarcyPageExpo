@@ -1,7 +1,8 @@
 "use client"
 
-import { commands } from "@/app/Sobre-Mim/_component"
+import Link from 'next/link'
 import { useState } from "react"
+import { commands } from "@/app/Sobre-Mim/_component"
 
 export default function SobreMim() {
     const [commandHistory, setCommandHistory] = useState<Array<{ command: string; output: string }>>([
@@ -63,7 +64,9 @@ export default function SobreMim() {
         </div>
 
         <footer className="footer">
+        <Link href="https://github.com/mcarina" className=" flex justify-center" target="_blank" rel="noopener noreferrer">
             <pre> {`/* visite meus projetos no github */`} </pre>
+        </Link>
         </footer>
     </section>
 )

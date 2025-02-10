@@ -19,7 +19,7 @@ function CardProjects() {
       <pre className="text-muted-foreground text-sm">
         {`[ Next.js, React.js]`}
       </pre>
-  </Link>
+    </Link>
 
     <Link href="/Projects/backend" className="group card-containers">
       <h3 className="text-xl font-semibold mb-2">
