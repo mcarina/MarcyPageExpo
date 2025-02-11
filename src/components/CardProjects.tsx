@@ -1,50 +1,62 @@
 "use client"
 
+import { useState } from 'react';
 import { motion } from "framer-motion"
 import Link from 'next/link'
+import { projects } from '@/app/Projects/_component';
+import { Folder } from "lucide-react"
+import Filter from '@/app/Sobre-Mim/_component/Filter';
 
-function CardProjects() {
+export default function CardProjects() {
+const [filter, setFilter] = useState<"all" | "frontend" | "backend" | "fullstack">("all")
+const filteredProjects = projects.filter((project) => (filter === "all" ? true : project.type === filter))
+
   return (
-    <motion.div
-    initial={{ opacity: 0, y: 20 }}
-    animate={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.5, delay: 0.2 }}
-    className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto"
-  >
-    <Link href="/Projects/frontend" className="group card-containers">
-      <h3 className="text-xl font-semibold mb-2">
-      <span className="text-primary">&gt; </span>
-        Front-end
-      </h3>
-      <pre className="text-muted-foreground text-sm">
-        {`[ Next.js, React.js]`}
-      </pre>
-    </Link>
+    <section className="container">
 
-    <Link href="/Projects/backend" className="group card-containers">
-      <h3 className="text-xl font-semibold mb-2">
-      <span className="text-primary">&gt; </span>
-        Back-end
-      </h3>
-      <pre className="text-muted-foreground text-sm">
-        {`[ Laravel, Python ]`}
-      </pre>
+            <div className="border p-4 mb-8">
+                <p className="p-projects">
+                        {`Total de projetos: ${filteredProjects.length} `}
+                </p>
+                <p className="p-projects">
+                    {`Tipo: ${filter === "all" ? "todos" : filter}`}
+                </p>
+            </div>
 
-    </Link>
-    <Link href="/Dashboards" className="group card-containers">
-      <h3 className="text-xl font-semibold mb-2">
-      <span className="text-primary">&gt; </span>
-        Dashboards
-      </h3>
-      <pre className="text-muted-foreground text-sm">
-        {`[ alguma descri;'ao aquo ]`}
-      </pre>
+            <Filter filter={filter} setFilter={setFilter}/>
 
-    </Link>
+            <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="p-6 grid grid-cols-1 md:grid-cols-4 gap-1 max-w-1xl mx-auto"
+            >
+            {filteredProjects.map((project)=>(
+                <div className="group card-project-containers" >
+                    <Link href={`/Projects/${project.id}`}>
+                        <pre>
+                            <div key={project.id}>
+                                <div className="flex">
+                                <Folder className="mr-2 h-8 w-6 text-primary" />
+                                
+                                <h3>{project.name}</h3>
 
-  </motion.div>
+                                </div>
+                                <div className="space-y-2">
+                                    <p>{project.description}</p>
+                                    <p>
+                                        <strong>Tech Stack: {project.tech.join(", ")}</strong>
+                                    </p>
+                                </div>
+                            </div>
+                        </pre>
+                    </Link>
+                </div>
 
+            ))}
+        
+            </motion.div>
+
+    </section>
   )
 }
-
-export default CardProjects

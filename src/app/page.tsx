@@ -1,5 +1,5 @@
 
-import CardProjects from "@/components/CardProjects";
+import CardHome from "@/components/CardHome";
 import { Sparkles } from "lucide-react"
 
 export default function Home() {
@@ -17,7 +17,7 @@ export default function Home() {
             <p className="p-subtext text-muted-foreground leading-relaxed">Aprendendo e resolvendo novos problemas de codigo</p>
           </code>
             
-            <CardProjects/>
+            <CardHome/>
             
         </pre>
 
@@ -33,7 +33,7 @@ export default function Home() {
 const ascii = `
   /./,   __ _ _ __ ___ _   _    ______ ______   ___  
  /    , / _  |  __/ __| | | |  / _ .  v '_ .  /  _ . 
-/ /./. , (_| | | | (__| |_| | | . __/>  <| |_) | (_) |
-./    ./,__,_|_|  \___| .__, |  .___/_/._; .__/ .___/ 
+/ /./. , (_| | | | (__| |_| | | . __/>  <| |_) | (_)|
+./    ./,__,_|_|  \___| .__, |  .___/_/._; .__/ .___ / 
                        |___/            |_|          
 `
