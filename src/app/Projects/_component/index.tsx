@@ -8,7 +8,9 @@ export const projects: Project[] = [
         status: "completed",
     //   demoUrl: "https://demo-ecommerce.example.com",
         githubUrl: "https://github.com/mcarina/Receita-Next-app",
-        longDescription: ``,
+        longDescription: `Este projeto foi desenvolvido com o objetivo de estudar e praticar o Next.js 14,
+        explorando suas melhores práticas e recursos mais modernos. A estrutura foi cuidadosamente planejada 
+        para ser eficiente, rápida e bem organizada, com foco em`,
         features: [
         "Autenticação de usuários",
         "CRUD completo de receitas",

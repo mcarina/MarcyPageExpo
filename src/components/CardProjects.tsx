@@ -5,7 +5,7 @@ import { motion } from "framer-motion"
 import Link from 'next/link'
 import { projects } from '@/app/Projects/_component';
 import { Folder } from "lucide-react"
-import Filter from '@/app/Sobre-Mim/_component/Filter';
+import Filter from '@/app/Projects/_component/Filter';
 
 export default function CardProjects() {
 const [filter, setFilter] = useState<"all" | "frontend" | "backend" | "fullstack">("all")
