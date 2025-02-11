@@ -18,6 +18,7 @@ const config: Config = {
         card: "var(--card)",
         cardforeground: "var(--card-foreground)",
         mutedforeground: "var(--muted-foreground)",
+        colorSelects: "var(--color-selects)"
       },
     },
   },

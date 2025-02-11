@@ -16,7 +16,7 @@ export const NavHome = () => {
                         <Link 
                             key={item.title}
                             href={item.href}
-                            className={`navLink ${isActive ? 'bg-[#969696] text-black' : 'text-[#BDBDBDE6]'}`}
+                            className={`navLink ${isActive ? 'bg-[#adadada6] text-black' : 'text-[#BDBDBDE6]'}`}
                         >
                             <span className="text-primary">&gt;</span> ~/
                             {item.title}

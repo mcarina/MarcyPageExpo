@@ -144,3 +144,7 @@ footer{
 .button{
   @apply flex font-mono border p-4 pb-0 pt-1;
 }
+
+.badge{
+  @apply border rounded-2xl pl-2 pr-2;
+}
