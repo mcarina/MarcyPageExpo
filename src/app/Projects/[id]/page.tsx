@@ -10,6 +10,20 @@ const PageId = () => {
     const projectId = params.id;
     const project = projects.find((p) => p.id === projectId);
 
+    const getStatusColor = (status: Project["status"]) => {
+      switch (status) {
+        case "completed":
+          return "text-green-500"
+        case "in-progress":
+          return "text-yellow-500"
+        case "planned":
+          return "text-blue-500"
+        default:
+          return "text-muted-foreground"
+      }
+    }
+
+    
   return (
     <section className="container">
       <div className="border p-8">
@@ -18,7 +32,7 @@ const PageId = () => {
             <h1>
               {project.name}
             </h1>
-            <span className="ml-auto">{project.status}</span>
+            <span className={`ml-auto ${getStatusColor(project.status)}`}>{project.status}</span>
           </div>
           <p>{project.longDescription}</p>
         </main>
