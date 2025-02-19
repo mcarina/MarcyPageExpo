@@ -1,36 +1,53 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Marcy Page Expo
+Bem-vindo ao repositório do Marcy Page Expo! Este é um portfólio interativo com um tema 
+inspirado em terminal/CMD, onde apresento meus projetos de forma dinâmica e estilizada.
 
-## Getting Started
+O projeto é bem estruturado, componetizado, intuitivo, dinâmico e leve, proporcionando uma experiência fluida para os usuários.
 
-First, run the development server:
+## 🛠️ Funcionalidades
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Interface em estilo terminal:** A seção "Sobre Mim" funciona como um terminal interativo, permitindo comandos personalizados, como skill, que retorna minhas habilidades em programação.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Navegação entre seções:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Home:** Introdução ao portfólio.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Meus Projetos:** Lista de projetos em formato de cards, cada um com sua própria página detalhada e link para o GitHub.
 
-## Learn More
+- **Dashboards:** Exibição semelhante à dos projetos, mas voltada para dashboards desenvolvidos.
 
-To learn more about Next.js, take a look at the following resources:
+- **Sobre Mim:** Terminal interativo com informações pessoais e habilidades.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 💡 Tecnologias Utilizadas
+- **DevOps**: Docker,
+- **Front-end:** Next.js, Tailwind Css, TypeScript
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+> ###  Como Usar
+> _Pré-requisitos, Docker_
+>
+> 1. Clone este repositório:
+>   ```bash
+>   git clone https://github.com/mcarina/MarcyPageExpo.git
+>   ```
+>  
+> 3. Instale as dependências do projeto usando o docker:
+>   ```bash
+>   docker compose up --build -d
+>   ```
+>
+>5. Abra o navegador e vá para `http://localhost:3002` para ver o projeto em ação.
+>
 
-## Deploy on Vercel
+##
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 🎨 Inspiração
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+[github] - (https://github.com/wiscaksono/wiscaksono-site)
+
+### 📤 Contribuição
+
+Sinta-se à vontade para abrir issues e enviar pull requests e se inspirar, mais por favor não copie!
+
+### ✨ Autor
+
+Desenvolvido por Marcy. Conecte-se comigo no LinkedIn!
