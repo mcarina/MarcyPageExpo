@@ -119,7 +119,7 @@ footer{
 }
 
 .home-container{
-  @apply absolute inset-0 overflow-hidden pointer-events-none;
+  @apply px-4 py-40 mx-auto;
 }
 
 /* About, sobre mim */

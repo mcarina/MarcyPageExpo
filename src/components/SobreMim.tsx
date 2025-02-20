@@ -56,7 +56,7 @@ export default function SobreMim() {
                             }
                             }}
                             className="bg-transparent border-none outline-none flex-1 focus:ring-0"
-                            placeholder="Digite um dos comandos acima para saber mais sobre mim..."
+                            placeholder="Digite um dos comandos acima para saber mais sobre mim ou digite 'help'"
                             spellCheck="false"
                         />
                     </div>

@@ -1,5 +1,6 @@
 
 import CardHome from "@/components/CardHome";
+import { SobreProjeto } from "@/components/SobreProjeto";
 import { Sparkles } from "lucide-react"
 
 export default function Home() {
@@ -7,7 +8,7 @@ export default function Home() {
     <div className="home" >
       <div className="home-container">
         
-        <pre className='flex h-full flex-col items-center justify-center space-y-2.5 whitespace-pre md:space-y-3'>
+        <pre className='flex flex-cols h-full flex-col items-center justify-center space-y-2.5 whitespace-pre md:space-y-3'>
           <div className="flex justify-center">
             <Sparkles className="w-8 h-8 text-primary animate-pulse" />
           </div>
@@ -18,7 +19,8 @@ export default function Home() {
           </code>
             
             <CardHome/>
-            
+            <SobreProjeto/>
+        
         </pre>
 
       </div>
