@@ -11,7 +11,7 @@ function CardHome() {
     transition={{ duration: 0.5, delay: 0.2 }}
     className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto"
   >
-    <Link href="/Projects/frontend" className="group card-containers">
+    <Link href="/Projects" className="group card-containers">
       <h3 className="text-xl font-semibold mb-2">
       <span className="text-primary">&gt; </span>
         Front-end
@@ -21,7 +21,7 @@ function CardHome() {
       </pre>
     </Link>
 
-    <Link href="/Projects/backend" className="group card-containers">
+    <Link href="/Projects" className="group card-containers">
       <h3 className="text-xl font-semibold mb-2">
       <span className="text-primary">&gt; </span>
         Back-end
