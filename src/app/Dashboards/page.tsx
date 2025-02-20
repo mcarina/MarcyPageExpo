@@ -1,8 +1,10 @@
-import React from 'react'
+import CardDash from "@/components/CardDash"
 
 const page = () => {
   return (
-    <div>page</div>
+    <div>
+      <CardDash/>
+    </div>
   )
 }
 
