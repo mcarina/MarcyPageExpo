@@ -37,7 +37,7 @@ function CardHome() {
         Dashboards
       </h3>
       <pre className="text-muted-foreground text-sm">
-        {`[ alguma descri;'ao aquo ]`}
+        {`[ Py, PowerBi, LookerStudio ]`}
       </pre>
 
     </Link>
